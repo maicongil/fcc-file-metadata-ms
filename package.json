@@ -1,0 +1,19 @@
+{
+  "name": "fcc-file-metadata-ms",
+  "version": "1.0.0",
+  "description": "FCC File Metadata Microservice Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maicongil/fcc-file-metadata-ms.git"
+  },
+  "author": "Maicon Gil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maicongil/fcc-file-metadata-ms/issues"
+  },
+  "homepage": "https://github.com/maicongil/fcc-file-metadata-ms#readme"
+}
