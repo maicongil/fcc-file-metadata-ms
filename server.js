@@ -1,12 +1,14 @@
 var express = require('express'),
     multer  = require('multer'),
     path = require('path'),
+    bodyParser = require('body-parser'),
     upload = multer({ dest: 'uploads/' }),
     app = express(),
     port = process.env.PORT || 8000;
  
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended : true}));
 
 app.get("/", function(req, res){
     res.sendFile("index.html");
