@@ -21,7 +21,11 @@ app.post("/upload", function(req, res){
 //User Story: When I submit something, I will receive the file size in bytes within the JSON response
     upload(req, res, function (err) {
         if (err) {
-            res.end(JSON.stringify({error : err}));    
+            var errorMessage =  'Unknown error';
+            if(err.code && err.code === 'LIMIT_FILE_SIZE'){
+                errorMessage = 'File size limit exceded. Max size permited: 1Mb';   
+            }
+            res.end(JSON.stringify({error : errorMessage}));    
         }
         if(!req.file){
             res.end(JSON.stringify({error : 'File not informed'}));    

@@ -6,9 +6,15 @@
 </head>
 <body>
     <h1>File Metadata Microservice</h1>
+
+    <ul>
+        <li>User Story: I can submit a FormData object that includes a file upload.</li>
+        <li>User Story: When I submit something, I will receive the file size in bytes within the JSON response</li>
+    </ul>
+
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <input type="file" name="uploadFile"/>
-        <input type="submit" value="Send" />
+        <button>Send File</button>
     </form>
 </body>
 </html>
